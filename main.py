@@ -39,16 +39,16 @@ def piePlot(dataset):
                "[O professor usou bem os recursos e as ferramentas computacionais]",
                "[O professor foi acessível e prestativo]",
                ]
-    title = "Habilidade e receptividade do Professor "
+    #title = "Habilidade e receptividade do Professor "
     features_2 = ['Nível de esforço dos alunos',
                 "[Os objetivos foram claros]",
                 "[O conteúdo da disciplina foi organizada e bem planejada]",
                 "[A carga da disciplina foi apropriada]" ]
-    #title = "Disciplina"
+    title = "Disciplina"
     fig, axes = plt.subplots(ncols=2,nrows=2, figsize=(4, 2), dpi=100)
     plt.suptitle(title)
     axe = axes.ravel()
-    for i, feature in enumerate(features_1):
+    for i, feature in enumerate(features_2):
         dataset_copy = dataset.copy()
         dataset_copy.dropna(subset=[feature],
                             inplace=True)
